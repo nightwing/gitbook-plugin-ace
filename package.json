@@ -1,0 +1,18 @@
+{
+    "name": "gitbook-plugin-ace",
+    "description": "Ace, code editor plugin for GitBook",
+    "main": "index.js",
+    "version": "0.0.1",
+    "engines": {
+        "gitbook": ">1.x.x"
+    },
+    "homepage": "https://github.com/ymcatar/gitbook-plugin-ace",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ymcatar/gitbook-plugin-ace.git"
+    },
+    "license": "Apache 2",
+    "bugs": {
+        "url": "https://github.com/ymcatar/gitbook-plugin-ace/issues"
+    }
+}
