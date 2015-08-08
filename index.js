@@ -2,15 +2,19 @@ module.exports = {
 
     website: {
         assets: "./assets",
+        css: [
+          "ace.css"
+        ],
         js: [
-            "ace.js"
+          "ace/ace.js",
+          "ace.js"
         ]
     },
 
     blocks: {
         ace: {
             process: function(blk) {
-              return 'testing';
+              return '<div class="well" id="editor">'+blk.body.trim()+'</div>';
             }
         }
     }
