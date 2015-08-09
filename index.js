@@ -16,7 +16,7 @@ module.exports = {
     blocks: {
         ace: {
             process: function(blk) {
-              return '<div class="aceCode">'+escape(blk.body.trim())+'</div>';
+              return '<div class="aceBlock"><div class="aceCode">'+escape(blk.body.trim())+'<br></div>';
             }
         }
     }
