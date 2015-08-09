@@ -1,3 +1,5 @@
+var escape = require('html-escape');
+
 module.exports = {
 
     website: {
@@ -14,7 +16,7 @@ module.exports = {
     blocks: {
         ace: {
             process: function(blk) {
-              return '<div class="well" id="editor">'+blk.body.trim()+'</div>';
+              return '<div class="aceCode">'+escape(blk.body.trim())+'</div>';
             }
         }
     }

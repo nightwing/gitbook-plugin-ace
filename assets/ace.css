@@ -1,5 +1,12 @@
-#editor {
-    position: relative;
-    width: 75%;
-    height: 300px;
+.aceCode {
+    width: 100%;
+    font-size: 14px !important;
+    margin-bottom: 20px;
+    padding-bottom: 120px;
+    border: 2px solid #EBEBEB;
+    border-radius: 2px;
+}
+
+.aceCode.dark {
+  border: 2px solid black;
 }
