@@ -2,11 +2,11 @@
     font-size: 14px !important;
 }
 
-.aceBlock {
+.ace {
   border: 2px solid #EBEBEB;
   border-radius: 2px;
 }
 
-.aceBlock.dark {
+.ace.dark {
   border: 2px solid black;
 }
