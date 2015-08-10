@@ -3,19 +3,27 @@ require(["gitbook", "jquery"], function(gitbook, $) {
   var init = function(){
     var aceCount = 0;
 
-    $('.aceCode').each(function(){
-      var $ace = $(this);
+    $('.ace').each(function(){
+      var $ace = $(this).children('.aceCode');
+      var config = $ace.data('config');
 
       var id = 'ace'+(aceCount++);
       $ace.attr('id', id);
 
       var editor = ace.edit(id);
       editor.setTheme('ace/theme/chrome');
-      editor.getSession().setMode('ace/mode/c_cpp');
       editor.setOptions({maxLines: 100});
 
+      if(config.edit === false)
+        editor.setReadOnly(true);
+
+      if(config.lang)
+        editor.getSession().setMode('ace/mode/'+config.lang);
+      else
+        editor.getSession().setMode('ace/mode/c_cpp'); //default to c language
+
       // handler for dark theme
-      $aceParent = $ace.parent('.aceBlock');
+      $aceParent = $(this);
       setTimeout(function(){
         if($('.book').hasClass('color-theme-2')){
           $aceParent.addClass('dark');

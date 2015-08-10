@@ -16,7 +16,11 @@ module.exports = {
     blocks: {
         ace: {
             process: function(blk) {
-              return '<div class="aceBlock"><div class="aceCode">'+escape(blk.body.trim())+'<br></div>';
+              var config = {
+                edit: blk.kwargs.edit,
+                lang: blk.kwargs.lang
+              };
+              return '<div class="ace"><div class="aceCode" data-config='+JSON.stringify(config)+'>'+escape(blk.body.trim())+'<br></div>';
             }
         }
     }
