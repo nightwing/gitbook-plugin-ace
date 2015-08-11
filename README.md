@@ -8,6 +8,7 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 ## Changelog
 
 * 0.0 Releases:
+  * **0.0.2**: Added .pdf, .epub, .emobi format export support.
   * **0.0.1**: Initial release.
 
 ## Syntax
