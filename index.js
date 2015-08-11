@@ -16,11 +16,16 @@ module.exports = {
     blocks: {
         ace: {
             process: function(blk) {
-              var config = {
-                edit: blk.kwargs.edit,
-                lang: blk.kwargs.lang
-              };
-              return '<div class="ace"><div class="aceCode" data-config='+JSON.stringify(config)+'>'+escape(blk.body.trim())+'<br></div>';
+              if(this.generator === 'website'){
+                var config = {
+                  edit: blk.kwargs.edit,
+                  lang: blk.kwargs.lang
+                };
+                return '<div class="ace"><div class="aceCode" data-config='+JSON.stringify(config)+'>'+escape(blk.body.trim())+'<br></div>';
+              } else {
+                var body = blk.body.trim();
+                return '<pre>' + escape(body) + '</pre>';
+              }
             }
         }
     }
