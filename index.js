@@ -19,7 +19,8 @@ module.exports = {
               if(this.generator === 'website'){
                 var config = {
                   edit: blk.kwargs.edit,
-                  lang: blk.kwargs.lang
+                  lang: blk.kwargs.lang,
+                  check: blk.kwargs.check
                 };
                 return '<div class="ace"><div class="aceCode" data-config='+JSON.stringify(config)+'>'+escape(blk.body.trim())+'<br></div>';
               } else {

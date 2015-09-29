@@ -8,8 +8,9 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 ## Changelog
 
 * 0.0 Releases:
-  * **0.0.2**: Added .pdf, .epub, .emobi format export support.
-  * **0.0.1**: Initial release.
+    * **0.0.3**: Added option to disable syntax validation.
+    * **0.0.2**: Added .pdf, .epub, .emobi format export support.
+    * **0.0.1**: Initial release.
 
 ## Syntax
 
@@ -30,6 +31,8 @@ int main(){
 * ```edit```: if this is set to true, the code will be editable by the user.
 
 * ```lang```: the language for syntax highlight. For the full list of keyword for each language, please check out the github page of ace [here](https://github.com/ajaxorg/ace-builds/tree/master/src-min-noconflict), all the related files are starting with prefix ```mode-```. For instance:
-  * mode_c_cpp.js ----> c_cpp
-  * mode_java.js ----> java
-  * ...
+    * mode_c_cpp.js ----> c_cpp
+    * mode_java.js ----> java
+    * ...
+
+* '''check```: if this is set to false, syntax validation will be disabled.
