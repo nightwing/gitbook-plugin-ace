@@ -22,7 +22,7 @@ module.exports = {
                   lang: blk.kwargs.lang,
                   check: blk.kwargs.check
                 };
-                return '<div class="ace"><div class="aceCode" data-config='+JSON.stringify(config)+'>'+escape(blk.body.trim())+'<br></div>';
+                return '<div class="ace"><div class="aceCode" data-config='+JSON.stringify(config)+'>'+escape(blk.body.trim())+'<br></div></div>';
               } else {
                 var body = blk.body.trim();
                 return '<pre>' + escape(body) + '</pre>';
